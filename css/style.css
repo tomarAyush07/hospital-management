@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+header {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: #fff;
+    padding: 20px 10%;
+}
+
+header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .top-bar .contact-info span {
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+header .appointment-btn a {
+    background: #f35f32;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+header .appointment-btn a:hover {
+    background: #e64a19;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 0.8rem 2rem;
+}
+
+nav .logo h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav .logo span {
+    color: #ffd700;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+nav ul li .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+    min-width: 200px;
+    z-index: 10;
+}
+
+nav ul li .dropdown-menu li {
+    margin: 0;
+}
+
+nav ul li .dropdown-menu li a {
+    color: #333;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+    z-index: 2;
+}
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-content .btn:hover {
+    background-color: #0056b3;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.carousel img {
+    object-fit: cover;
+    height: 100vh;
+}
+
+.hero-image {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.hero-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.services {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.services h2::after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #007bff;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    width: 260px;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2), -8px -8px 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.3), -10px -10px 25px rgba(255, 255, 255, 0.5);
+}
+
+.service-card .icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    animation: float 3s infinite ease-in-out;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.info {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: #2d4059;
+}
+
+.info-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #6c757d;
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+.info-card {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e3e3e3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+}
+
+.info-card h3 {
+    font-size: 1.9em;
+    margin-bottom: 8px;
+    color: #007bff; 
+    font-weight: 600;
+}
+
+.info-card p {
+    font-size: 1.1em;
+    margin: 0;
+    color: #6c757d;
+}
+.counter {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #1b3f65
+}
+@media (max-width: 768px) {
+    .info h2 {
+        font-size: 1.8em;
+    }
+
+    .info-card h3 {
+        font-size: 2em;
+    }
+
+    .info-card p {
+        font-size: 0.9em;
+    }
+}
+footer {
+    padding: 20px 10%;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
