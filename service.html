@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MEDIcare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .service-card {
+            transform: perspective(1000px) rotateY(0deg);
+            transition: transform 0.6s ease, box-shadow 0.3s ease;
+            will-change: transform;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:hover {
+            transform: perspective(1000px) rotateY(20deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service-card .icon {
+            font-size: 2.5rem;
+            animation: bounce 2s infinite;
+            color: #007bff;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                transform: perspective(1000px) rotateY(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>MEDI<span>care</span></h1>
+            </div>
+            <ul>
+                <li><a href="doctorfront.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="Doctors.html">Doctors</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>At MEDIcare, we offer a wide range of healthcare services tailored to meet the diverse needs of our patients. Explore our specialized services below:</p>
+
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="images/ic.jpg" alt="General Consultation">
+                <div class="icon"><i class="fas fa-stethoscope"></i></div>
+                <h3>General Consultation</h3>
+                <p>Receive expert advice and diagnosis from our experienced general practitioners for your health concerns.</p>
+                <ul>
+                    <li>Routine health check-ups</li>
+                    <li>Health risk assessments</li>
+                    <li>Personalized wellness plans</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="images/bed.webp" alt="Cardiology">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                <h3>Cardiology</h3>
+                <p>Advanced care for your heart health by our dedicated team of cardiologists.</p>
+                <ul>
+                    <li>Non-invasive and invasive procedures</li>
+                    <li>Stress tests and echocardiograms</li>
+                    <li>Chronic condition management</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="images/bed2.webp" alt="Radiology">
+                <div class="icon"><i class="fas fa-x-ray"></i></div>
+                <h3>Radiology</h3>
+                <p>State-of-the-art imaging technologies for precise diagnosis and treatment.</p>
+                <ul>
+                    <li>X-rays and CT scans</li>
+                    <li>MRI and ultrasound</li>
+                    <li>Image-guided therapies</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="images/icu.jpg" alt="Nursing Care">
+                <div class="icon"><i class="fas fa-user-nurse"></i></div>
+                <h3>Nursing Care</h3>
+                <p>Compassionate nursing care to aid recovery and ensure patient comfort.</p>
+                <ul>
+                    <li>Post-surgical care</li>
+                    <li>Wound management</li>
+                    <li>Home care nursing</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="images/op.jpg" alt="Pathology">
+                <div class="icon"><i class="fas fa-vial"></i></div>
+                <h3>Pathology</h3>
+                <p>Reliable and accurate diagnostic testing for better health outcomes.</p>
+                <ul>
+                    <li>Blood tests and biopsies</li>
+                    <li>Microbiological analysis</li>
+                    <li>Cancer screening</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="images/doc.jpg" alt="Emergency Services">
+                <div class="icon"><i class="fas fa-ambulance"></i></div>
+                <h3>Emergency Services</h3>
+                <p>24/7 emergency response and critical care for urgent medical needs.</p>
+                <ul>
+                    <li>Ambulance services</li>
+                    <li>Trauma and critical care</li>
+                    <li>Emergency surgeries</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MEDIcare. All rights reserved. Designed for patient care excellence.</p>
+    </footer>
+</body>
+
+</html>

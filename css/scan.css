@@ -1,0 +1,12 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+#canvas3d {
+  width: 600px;
+  min-height: 600px;
+  border-radius: 40%;
+}
